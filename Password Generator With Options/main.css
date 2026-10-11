@@ -1,0 +1,138 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  background-color: #eee;
+  margin: 0;
+}
+h1 {
+  padding: 20px;
+  margin: 0 0 20px;
+  background-color: white;
+  text-align: center;
+}
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 15px;
+}
+.options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.options .pass-length {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+}
+.options label {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.options label:hover {
+    background-color: #f9f9f9;
+}
+.include-numbers,
+.include-special {
+    width: 35px;
+    height: 35px;
+    display: block;
+    margin: 20px auto 0px;
+    accent-color: indianred;
+}
+
+@media (min-width: 870px) {
+    .options label:not(:last-child) {
+        border-right: 2px solid #ccc;
+    }
+}
+@media (min-width: 600px) {
+    .options label:first-child {
+        border-right: 2px solid #ccc;
+    }
+}
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: indianred;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #c0392b;
+}
+.result {
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    border: 1px dashed indianred;
+    font-size: 30px;
+    border-radius: 6px;
+}
+h3 {
+    padding: 15px;
+    background-color: #ddd;
+    border-radius: 6px;
+}
+.saved-passwords {
+    background-color: white;
+    text-align: left;
+    border-radius: 6px;
+}
+.saved-passwords > div {
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.saved-passwords > div:first-child {
+    padding-top: 0;
+}
+.saved-passwords > div:last-child {
+    padding-bottom: 0;
+}
+.saved-passwords > div div:first-child {
+    display: flex;
+    align-items: center;
+}
+.saved-passwords > div:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.saved-passwords > div span {
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 15px;
+}
+.delete {
+    background-color: indianred;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
